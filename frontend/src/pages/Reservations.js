@@ -1,5 +1,10 @@
-import { FaBuilding, FaSearch, FaTimesCircle, FaFilter, FaUsers } from 'react-icons/fa';
+import { FaBuilding, FaSearch, FaTimesCircle, FaFilter, FaUsers,FaTachometerAlt,FaCogs } from 'react-icons/fa';
 import { useState } from 'react';
+
+import ford from "../assets/cartype/family/Ford-Ecosport-cars.png";
+import foton from "../assets/cartype/family/foton-cars.png";
+import nissan from "../assets/cartype/family/family cars-BMW X3_0.jpg";
+
 
 import luxury from '../assets/catergories/luxury-mercedez-benz.png';
 
@@ -331,267 +336,160 @@ export const Reservations = () => {
         </div>
       {/* Cards */}
 
-      <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {/* Card 1 */}
-        <div>
-          <div className="border rounded-lg bg-gradient-to-br from-f1f6fd via-edf1f7 to-transparent shadow-lg">
+      <div className="container-family grid gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center items-center">
+        {/* 1st card 1st row */}
+        <div className=" border rounded-lg grid bg-card">
+            <div className="h-56 overflow-hidden ">
             <img
-              src={luxury}
-              className="rounded-lg"
+              src={ford}
+              className="rounded-lg h-full w-full object-cover"
               alt="Toyota Avanza"
             />
 
-            <div className="grid bg-card">
-              <h3 className="text-2xl px-10 font-bold py-7">Toyota Avanza</h3>
-
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <div className='flex justify-end mx-3'>
-                <button className="flex  justify-center bg-primary text-white rounded-lg px-4 py-2 my-5 w-1/2">
-                        Rent Now
-                </button>                   
-              </div>
-            
             </div>
-          </div>
+
+            <div className="grid ">
+              <h3 className="text-4xl pl-9 sm:pl-2 md:pl-9  text-left font-semibold py-5">
+                Ford Ecosport
+              </h3>
+              <ul className="list-none flex justify-between px-9 sm:px-2 md:px-9 mt-3">
+                <li className="flex">
+                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
+                  <span className="mx-2">5 Seaters</span>
+                </li>
+                <li className="flex pr-1">
+                  <FaTachometerAlt size={25} color="#189cf4" />{" "}
+                  {/* Users Icon */}
+                  <span className="mx-2">168 km/h</span>
+                </li>
+              </ul>
+              <ul className="list-none flex justify-between px-9 sm:px-2 md:px-9 mt-3">
+                <li className="flex">
+                  <FaTachometerAlt size={25} color="#189cf4" />{" "}
+                  {/* Users Icon */}
+                  <span className="mx-2">3750 rpm</span>
+                </li>
+                <li className="flex">
+                  <FaCogs size={25} color="#189cf4" /> {/* Users Icon */}
+                  <span className="mx-2">Automatic</span>
+                </li>
+              </ul>
+              <div className="flex justify-between px-9 py-5 sm:px-3 md:px-9 ">
+                <div className="text-center">
+                  <p className="font-semibold">Php 4,500 / Day</p>
+                </div>
+                <div className="text-center">
+                  <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5">
+                    Rent Now
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div> {/* 1st card 1st row */}
+
+        {/* 2nd card 1st row */}
+        <div className=" border bg-shade rounded-lg grid">
+            <div className="h-56 overflow-hidden">
+
+            <img
+              src={foton}
+              className="rounded-lg w-full h-full object-cover"
+              alt="Toyota Avanza"
+             
+            />
+            </div>
+
+            <div className="grid">
+              <h3 className="text-4xl pl-9 sm:pl-2 md:pl-9 text-left font-semibold py-5">
+                Foton Transvan
+              </h3>
+              <ul className="list-none flex justify-between px-9 sm:px-2 md:px-9 mt-3">
+                <li className="flex">
+                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
+                  <span className="mx-2">13 Seaters</span>
+                </li>
+                <li className="flex pr-1">
+                  <FaTachometerAlt size={25} color="#189cf4" />{" "}
+                  {/* Users Icon */}
+                  <span className="mx-2">130 km/h</span>
+                </li>
+              </ul>
+              <ul className="list-none flex justify-between px-9 sm:px-2 md:px-9 mt-3">
+                <li className="flex">
+                  <FaTachometerAlt size={25} color="#189cf4" />{" "}
+                  {/* Users Icon */}
+                  <span className="mx-2">3600 rpm</span>
+                </li>
+                <li className="flex">
+                  <FaCogs size={25} color="#189cf4" /> {/* Users Icon */}
+                  <span className="mx-2">Automatic</span>
+                </li>
+              </ul>
+              <div className="flex justify-between px-9 py-5 sm:px-3 md:px-9 ">
+                <div className="text-center">
+                  <p className="font-semibold">Php 6,000 / Day</p>
+                </div>
+                <div className="text-center">
+                  <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5">
+                    Rent Now
+                  </button>
+                </div>
+              </div>
+            </div>
         </div>
 
-        <div>
-          <div className="border rounded-lg bg-gradient-to-br from-f1f6fd via-edf1f7 to-transparent shadow-lg">
+        {/* 3rd card 1st row */}
+        <div className="grid bg-card border rounded-lg ">
+            <div className="h-56 overflow-hidden">
             <img
-              src={luxury}
-              className="rounded-lg"
+              src={nissan}
+              className="rounded-lg h-full w-full object-cover"
               alt="Toyota Avanza"
             />
 
-            <div className="grid bg-card">
-              <h3 className="text-2xl px-10 font-bold py-7">Toyota Avanza</h3>
-
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <div className='flex justify-end mx-3'>
-                <button className="flex  justify-center bg-primary text-white rounded-lg px-4 py-2 my-5 w-1/2">
-                        Rent Now
-                </button>                   
-              </div>
-            
             </div>
-          </div>
+
+            
+            <div className="grid ">
+              <h3 className="text-4xl pl-9 sm:pl-2 md:pl-9 text-left font-semibold py-5">Nissan</h3>
+              <ul className="list-none flex justify-between px-9 sm:px-2 md:px-9 mt-3">
+                <li className="flex">
+                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
+                  <span className="mx-2">18 Seaters</span>
+                </li>
+                <li className="flex pr-1">
+                  <FaTachometerAlt size={25} color="#189cf4" />{" "}
+                  {/* Users Icon */}
+                  <span className="mx-2">318 km/h</span>
+                </li>
+              </ul>
+              <ul className="list-none flex justify-between px-9 sm:px-2 md:px-9 mt-3">
+                <li className="flex">
+                  <FaTachometerAlt size={25} color="#189cf4" />{" "}
+                  {/* Users Icon */}
+                  <span className="mx-2">4400 rpm</span>
+                </li>
+                <li className="flex">
+                  <FaCogs size={25} color="#189cf4" /> {/* Users Icon */}
+                  <span className="mx-2">Automatic</span>
+                </li>
+              </ul>
+              <div className="flex justify-between px-9 py-5 sm:px-3 md:px-9  ">
+                <div className="text-center ">
+                  <p className="font-semibold">Php 6,000 / Day</p>
+                </div>
+                <div className="text-center">
+                  <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5">
+                    Rent Now
+                  </button>
+                </div>
+              </div>
+            </div>
         </div>
 
-        <div>
-          <div className="border rounded-lg bg-gradient-to-br from-f1f6fd via-edf1f7 to-transparent shadow-lg">
-            <img
-              src={luxury}
-              className="rounded-lg"
-              alt="Toyota Avanza"
-            />
 
-            <div className="grid bg-card">
-              <h3 className="text-2xl px-10 font-bold py-7">Toyota Avanza</h3>
 
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <div className='flex justify-end mx-3'>
-                <button className="flex  justify-center bg-primary text-white rounded-lg px-4 py-2 my-5 w-1/2">
-                        Rent Now
-                </button>                   
-              </div>
-            
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="border rounded-lg bg-gradient-to-br from-f1f6fd via-edf1f7 to-transparent shadow-lg">
-            <img
-              src={luxury}
-              className="rounded-lg"
-              alt="Toyota Avanza"
-            />
-
-            <div className="grid bg-card">
-              <h3 className="text-2xl px-10 font-bold py-7">Toyota Avanza</h3>
-
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <div className='flex justify-end mx-3'>
-                <button className="flex  justify-center bg-primary text-white rounded-lg px-4 py-2 my-5 w-1/2">
-                        Rent Now
-                </button>                   
-              </div>
-            
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="border rounded-lg bg-gradient-to-br from-f1f6fd via-edf1f7 to-transparent shadow-lg">
-            <img
-              src={luxury}
-              className="rounded-lg"
-              alt="Toyota Avanza"
-            />
-
-            <div className="grid bg-card">
-              <h3 className="text-2xl px-10 font-bold py-7">Toyota Avanza</h3>
-
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <div className='flex justify-end mx-3'>
-                <button className="flex  justify-center bg-primary text-white rounded-lg px-4 py-2 my-5 w-1/2">
-                        Rent Now
-                </button>                   
-              </div>
-            
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="border rounded-lg bg-gradient-to-br from-f1f6fd via-edf1f7 to-transparent shadow-lg">
-            <img
-              src={luxury}
-              className="rounded-lg"
-              alt="Toyota Avanza"
-            />
-
-            <div className="grid bg-card">
-              <h3 className="text-2xl px-10 font-bold py-7">Toyota Avanza</h3>
-
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <ul className="list-none flex justify-around gap-5 mt-3">
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                <li className="flex">
-                  <FaUsers size={25} color="#189cf4" /> {/* Users Icon */}
-                  <span className="mx-2">7 People</span>
-                </li>
-                
-              </ul>
-              <div className='flex justify-end mx-3'>
-                <button className="flex  justify-center bg-primary text-white rounded-lg px-4 py-2 my-5 w-1/2">
-                        Rent Now
-                </button>                   
-              </div>
-            
-            </div>
-          </div>
-        </div>
-        
-      </div> {/* End section of cards */}
+      </div>
 
      
  

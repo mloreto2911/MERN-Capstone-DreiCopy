@@ -14,7 +14,8 @@ module.exports = {
         check:"#009045",
         shade:"#EDF1F7",
         card:"#F0F5FC",
-        button: "#B21B00"
+        button: "#B21B00",
+        others: "#D9D9D9"
 
 
         

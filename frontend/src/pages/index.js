@@ -17,4 +17,5 @@ export { SignUp } from "./SignUp";
 export { FinalDetails } from "./FinalDetails";
 export { BookingConfirm } from "./BookingConfirm";
 export { Branches } from "./Branches";
+export { CarDetails } from "./CarDetails";
 export { PageNotFound } from "./PageNotFound";
