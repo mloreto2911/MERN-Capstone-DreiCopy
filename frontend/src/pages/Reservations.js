@@ -1,15 +1,16 @@
 import { FaBuilding, FaSearch, FaTimesCircle, FaFilter, FaUsers,FaTachometerAlt,FaCogs } from 'react-icons/fa';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import ford from "../assets/cartype/family/Ford-Ecosport-cars.png";
 import foton from "../assets/cartype/family/foton-cars.png";
 import nissan from "../assets/cartype/family/family cars-BMW X3_0.jpg";
 
-
 import luxury from '../assets/catergories/luxury-mercedez-benz.png';
 
 
 export const Reservations = () => {
+  const navigate = useNavigate();
   const [isCarSpecsOpen, setCarSpecsOpen] = useState(false);
   const [isCarCategoriesOpen, setCarCategoriesOpen] = useState(false);
   const [isTransmissionOpen, setTransmissionOpen] = useState(false);
@@ -77,6 +78,10 @@ export const Reservations = () => {
     const { value } = event.target;
     setSelectedTransmission(value);
   };
+
+  const handleRentNow = () =>{
+    navigate("/cardetails")
+  }
 
   return (
     <div>
@@ -379,7 +384,7 @@ export const Reservations = () => {
                   <p className="font-semibold">Php 4,500 / Day</p>
                 </div>
                 <div className="text-center">
-                  <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5">
+                  <button className="text-center p-1 bg-red-600 text-white rounded-lg px-5" onClick={handleRentNow}>
                     Rent Now
                   </button>
                 </div>

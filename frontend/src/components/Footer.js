@@ -2,12 +2,12 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className=" bg-gray-400">
+    <footer className=" bg-primary">
       <div className="container ">
         <div className="grid grid-cols-1 py-7 gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1">
             <div className="text-center text-dmode-olive font-semibold">
-              <h2 className="text-3xl pb-5 text-cyan-600">Services</h2>
+              <h2 className="text-3xl pb-5 text-white">Services</h2>
               <a href="faq.html">
                 <h3 className=" border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white">
                   FAQs
@@ -27,7 +27,7 @@ export const Footer = () => {
           </div>
           <div className="col-span-1">
             <div className="text-center tex t-dmode-olive font-semibold">
-              <h2 className="text-3xl pb-5 text-cyan-600">Contact Details</h2>
+              <h2 className="text-3xl pb-5 text-white">Contact Details</h2>
               <h3 className=" border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white">
                 Phone Number: (+63) 988 123 4567
               </h3>
@@ -44,7 +44,7 @@ export const Footer = () => {
           </div>
           <div className="col-span-1">
             <div className="text-center text-dmode-olive font-semibold">
-              <h2 className="text-3xl text- pb-5 text-cyan-600">Legal</h2>
+              <h2 className="text-3xl text- pb-5 text-white">Legal</h2>
               <a href="privacy.html">
                 <p className=" border-b-2 dark:border-dmode-lightolive py-3 dark:text-color-white">
                   Privacy Policy

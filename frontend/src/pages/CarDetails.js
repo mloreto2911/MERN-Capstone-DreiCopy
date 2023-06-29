@@ -12,6 +12,7 @@ import CargoProtect from "../assets/cargo-protect.png"
 import Insurance from "../assets/icons/insurance-protect.png"
 import NoInsurance from "../assets/icons/no-insurance.png"
 
+
 // icon 
 import { FaUsers,FaTachometerAlt,FaCogs} from "react-icons/fa";
 
@@ -20,11 +21,6 @@ import { FaUsers,FaTachometerAlt,FaCogs} from "react-icons/fa";
 
 
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-
-
-};
 
 
 export const CarDetails = () => {
@@ -37,14 +33,24 @@ const [showProtect2, setShowProtect2] = useState(false);
 const [showMessage, setShowMessage] = useState(false);
 const [showMessage1, setShowMessage1] = useState(false);
 
+const navigate = useNavigate();
 
-  const toggleMessage = () => {
-    setShowMessage(!showMessage);
-  };
-  const toggleMessage1 = () => {
-    setShowMessage1(!showMessage1);
 
-  };
+const handleConfirmClick = () => {
+  
+    console.log("Booking confirmed!");
+    navigate("/driver"); // Redirect to the desired page
+}
+
+
+
+const toggleMessage = () => {
+  setShowMessage(!showMessage);
+};
+const toggleMessage1 = () => {
+  setShowMessage1(!showMessage1);
+
+};
 
 
 
@@ -156,14 +162,14 @@ const toggleProtect2 = () =>{
         </div>
 
 
-        <div className="container __grid">
-          <div className="bg-light px-8 rounded-2xl">
+        <div className="container __grid-cardetails">
+          <div className=" bg-light px-8 rounded-2xl">
           <form action="">
-            <div className='grid lg:grid-cols-2'>
+            <div className=' grid lg:grid-cols-2'>
               <div className='pt-10'>
-                <img src={tesla} alt="" />
+                <img src={tesla} alt="" className='h-64 '/>
               </div>
-              <div>
+              <div className='pt-10'>
                 <h2 className='texct-primary text-2xl text-center py-5 text-primary font-semibold'>TESLA MODEL Y</h2>
                 <div className='flex justify-between mx-5 pb-2'>
                   <div className='flex gap-2 '>
@@ -288,17 +294,22 @@ const toggleProtect2 = () =>{
                 </div>
               </div>
               <p className='lg:pl-10'><span className='text-primary font-semibold'>FREE CANCELLATION ANYTIME</span> before the pick up the date</p>
-              <div className='flex lg:justify-end py-5'>
-                <div className='flex flex-col bg-primary  px-3 py-2 rounded-tl-3xl text-white text-center font-semibold'>
-                  <p className='lg:text-lg '>W/ CarGo Protect</p>
-                  <p>One-Time Price: Php 5,000</p>
+              
+              <div className='grid grid-col-2 lg:grid-cols-3 py-5'>
+                
+                <div className='lg:col-start-2 col-span-2 sm:col-span-1 lg:col-span-2 flex justify-end  md:justify-end lg:justify-center'>
+                  <div className='flex flex-col w-36 sm:w-auto lg:w-auto bg-primary px-2 md:px-5 lg:px-10 py-2 rounded-tl-3xl text-white text-center font-semibold'>
+                    <p className='lg:text-lg '>W/ CarGo Protect</p>
+                    <p>One-Time Price: Php 5,000</p>
+                  </div>
+                  <div className='bg-others py-2 w-36 lg:w-auto sm:w-auto sm:px-7 md:px-3 lg:px-14 flex justify-center items-center rounded-tr-3xl font-semibold'>
+                    <p className='text-xl'>Regular Book</p>
+                  </div>
                 </div>
-                <div className='bg-others py-2  px-5 flex justify-center items-center rounded-tr-3xl font-semibold'>
-                  <p className='text-xl'>Regular Book</p>
-                </div>
+                
               </div>
                   {/* 1st */}
-                  <div className='grid grid-flow-row grid-cols-3 '>
+                  <div className='grid grid-flow-row grid-cols-3 lg:pl-10'>
                       <div className='flex flex-col '>
                         <p onClick={toggleProtect} className='text-primary text-lg sm:text-xl cursor-pointer'>Excess Protection </p>
                         {showProtect &&(
@@ -311,13 +322,13 @@ const toggleProtect2 = () =>{
                         <img src={Insurance} alt="" className='h-10 w-10  sm:h-12 sm:w-12'/>
                       </div>
                     
-                    <div className='flex justify-center '>
+                    <div className='flex justify-center lg:pr-20'>
                         <img src={NoInsurance} alt="" className='h-8 w-8' />
                       </div>
                   </div> 
               <hr className='border-t-2 border-primary'/>
                {/* 2nd */}
-              <div className='grid grid-cols-3'>
+              <div className='grid grid-cols-3 lg:pl-10 lg:pt-2'>
                 <div className='flex flex-col '>
                   <p onClick={toggleProtect1} className='text-primary text-lg sm:text-xl cursor-pointer'>Complete Exterior Coverage </p>
                         {showProtect1 &&(
@@ -330,13 +341,13 @@ const toggleProtect2 = () =>{
                   <img src={Insurance} alt="" className='h-10 w-10  sm:h-12 sm:w-12'/>
                 </div>
                     
-                <div className='flex justify-center '>
+                <div className='flex justify-center lg:pr-20'>
                   <img src={NoInsurance} alt="" className='h-8 w-8' />
                 </div>
               </div> 
               <hr className='border-t-2 border-primary'/>
               {/* 3rd */}
-              <div className='grid grid-cols-3'>
+              <div className='grid grid-cols-3 lg:pl-10 lg:pt-2'>
                 <div className='flex flex-col '>
                   <p onClick={toggleProtect2} className='text-primary text-lg sm:text-xl cursor-pointer'>Excess Protection </p>
                   {showProtect2 &&(
@@ -348,7 +359,7 @@ const toggleProtect2 = () =>{
                   <img src={Insurance} alt="" className='h-10 w-10  sm:h-12 sm:w-12'/>
                 </div>
                     
-                <div className='flex justify-center '>
+                <div className='flex justify-center lg:pr-20'>
                   <img src={NoInsurance} alt="" className='h-8 w-8' />
                 </div>
               </div> 
@@ -366,11 +377,7 @@ const toggleProtect2 = () =>{
                 </button>
               </div>
               </div>
-              <div className='text-center pb-12'>
-                <button className='py-2 px-10 bg-button rounded-lg'>
-                  Continue
-                </button>
-              </div>  
+              
             </div>
             )}
             
@@ -378,7 +385,8 @@ const toggleProtect2 = () =>{
           </form>
           </div>
 
-          <div className='border border-card bg-light h-max rounded-2xl'>  
+          <div>
+          <div className='border border-card bg-light h-max rounded-2xl sticky top-20'>  
             <h2 className='text-primary text-xl px-12 pt-2 pb-4 font-bold text-center'>Price Breakdown</h2>
             <form action="">
               <div className='px-3'> 
@@ -417,8 +425,8 @@ const toggleProtect2 = () =>{
                     <p className='text-xl'>Php 45,500</p>
                   </div>
                   <div className='text-center pb-4'>
-                    <NavLink to="/finaldetails"> <button className='py-1 px-10 bg-button text-white rounded-lg'
-                    onClick={handleSubmit}>
+                    <NavLink to="/driver"> <button className='py-1 px-10 bg-button text-white rounded-lg'
+                    onClick={handleConfirmClick}>
                       Continue
                     </button>
                     </NavLink>
@@ -427,6 +435,8 @@ const toggleProtect2 = () =>{
             </form>
             
           </div>
+          </div>              
+          
         </div>
 
       </div> {/* end */} 

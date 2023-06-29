@@ -448,7 +448,7 @@ export const Driver = () => {
                 
 
                 
-      {/* Your JSX code */}
+      
       <div className="pb-10">
         {/* Start Upload File */}
         <div>
@@ -484,7 +484,7 @@ export const Driver = () => {
           </form>
           </div>
 
-          <div className='border border-card bg-light h-max rounded-2xl'>  
+          <div className='border border-card bg-light h-max rounded-2xl sticky top-20'>  
             <h2 className='text-primary text-xl px-12 pt-2 pb-4 font-bold text-center'>Price Breakdown</h2>
             <form action="">
               <div className='px-3'> 
